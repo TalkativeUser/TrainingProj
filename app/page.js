@@ -15,7 +15,6 @@ import fourthOfFifeIcon from '../public/Allimages/fifeIcons/Frame 4.png'
 import fifthOfFifeIcon from '../public/Allimages/fifeIcons/Frame 5.png'
 
 import EarthImg from '../public/Allimages/7.png'
-import glassOfMan from '../public/Allimages/Rectangle 36.png'
 import freelancerImg from '../public/Allimages/Iamge.png'
 
 import cyrcleImage1 from '../public/Allimages/Clinetes/1.png'
@@ -23,6 +22,10 @@ import cyrcleImage2 from '../public/Allimages/Clinetes/2.png'
 import cyrcleImage3 from '../public/Allimages/Clinetes/Ellipse74.png'
 import imageQuote from '../public/Allimages/quote-right.png'
 
+import BtnComp from './Components/BtnComp/BtnComp';
+import AboutUs from './Components/AboutUs/AboutUs';
+
+import glassOfMan from '../public/Allimages/Rectangle 36.png'
 
 
 
@@ -186,55 +189,33 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="  container section2 mt-24 lg:px-8 xl:px-10 md:px-36 sm:px-24 ">
-          <div className=" grid xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 text-white rounded-lg overflow-hidden ">
-            <div className="about ps-5 xl:col-span-2 ">
-              <h3 className="aboutUs forMiniMize ">About Us</h3>
+        <AboutUs sectionName='Home' title='AboutUs' textImage='We are a leading force in technology promotion. With our roots in Saudi Arabia and a new chapter revealing itself in Egypt, we bring a wealth of experience and knowledge to empower businesses and organizations. Our primary interest is in exploiting the potential of modern concepts such as big data analytics, artificial intelligence, computer vision, and Internet of Things solutions' 
 
-              <p className="forMiniMize2  ">
-                We are a leading force in technology promotion. With our roots
-                in Saudi Arabia and a new chapter revealing itself in Egypt, we
-                bring a wealth of experience and knowledge to empower businesses
-                and organizations. Our primary interest is in exploiting the
-                potential of modern concepts such as big data analytics,
-                artificial intelligence, computer vision, and Internet of Things
-                solutions
-              </p>
-            </div>
+srcImage={glassOfMan} altImage={'glassOfMan'} />
 
-            <div className="imgAbout ">
-              <Image
-                className=" w-[100%] h-80"
-                alt="glassOfMan"
-                 src={glassOfMan}
+<div className="fourRating grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 mt-28 ">
+      <div className="rating flex flex-col ">
+        {" "}
+        <span className="num">782</span>{" "}
+        <span className="text-white textNum">clients </span>{" "}
+      </div>
+      <div className="rating flex flex-col ">
+        {" "}
+        <span className="num">782</span>{" "}
+        <span className="text-white textNum">Completed projects </span>{" "}
+      </div>
+      <div className="rating flex flex-col ">
+        {" "}
+        <span className="num">782</span>{" "}
+        <span className="text-white textNum">It projects </span>{" "}
+      </div>
+      <div className="rating flex flex-col ">
+        {" "}
+        <span className="num">782</span>{" "}
+        <span className="text-white textNum">Sending Projects </span>{" "}
+      </div>
+    </div>
 
-              />
-            </div>
-          </div>
-
-          <div className="fourRating grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 mt-28 ">
-            <div className="rating flex flex-col ">
-              {" "}
-              <span className="num">782</span>{" "}
-              <span className="text-white textNum">clients </span>{" "}
-            </div>
-            <div className="rating flex flex-col ">
-              {" "}
-              <span className="num">782</span>{" "}
-              <span className="text-white textNum">Completed projects </span>{" "}
-            </div>
-            <div className="rating flex flex-col ">
-              {" "}
-              <span className="num">782</span>{" "}
-              <span className="text-white textNum">It projects </span>{" "}
-            </div>
-            <div className="rating flex flex-col ">
-              {" "}
-              <span className="num">782</span>{" "}
-              <span className="text-white textNum">Sending Projects </span>{" "}
-            </div>
-          </div>
-        </section>
 
         <section className=" container workingTeam  grid xl:grid-cols-2 lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 mt-28 lg:px-8 xl:px-10 md:px-36 sm:px-24  ">
           <div className="textWorking flex flex-col justify-center ">
@@ -378,13 +359,7 @@ export default function Home() {
               innovation through the latest technology trends.
             </p>
 
-            <button
-              className="px-4 py-3 rounded-lg w-48 md:p-2 sm:p-1 text-[#e7267a] mt-8 LatestProjects sm:mb-6 md:mb-6 "
-              style={{ border: "1px solid #e7267a" }}
-            >
-              {" "}
-              Latest Projects{" "}
-            </button>
+            <BtnComp text={'Latest Projects'} />
           </div>
 
           <div className=" ms-auto innerFourProj ">

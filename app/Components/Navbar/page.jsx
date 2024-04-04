@@ -24,14 +24,12 @@ const navLinks= [
 
  function showSidebar(){
 navContet.current.style.translate='0%'
-navContet.current.style.transition='400ms'
 close_x.current.style.display="block"
 barsIcon.current.style.display="none"
 
 
  }
  function hideSidebar(){
-  navContet.current.style.transition='400ms'
 navContet.current.style.translate='100%'
 close_x.current.style.display="none"
 barsIcon.current.style.display="block"
@@ -56,9 +54,19 @@ useEffect(()=> {
      
      <div ref={navContet} className= {`flex justify-between ${styles.navContent}`}  >
           <ul className= {`${styles.navContent_ul} m-0 p-0 flex  `}>
-          {navLinks.map((link,index)=>    <li key={index} className={`mx-3 ${styles.navContent_ul_li}`}>
+          {navLinks.map((link,index)=>    <li key={index} className={`mx-3 ${link.title==='Services'?'relative':""}  ${styles.navContent_ul_li}`}>
 
-                        <Link href={link.path}  className={`${styles.navLink} text-[#a4a8b2] no-underline ${pathname===link.path?styles.active:""}`} > {link.title} </Link>{" "} </li> )  }
+                        <Link href={link.path}  className={`${styles.navLink} text-[#a4a8b2] no-underline   ${pathname===link.path?styles.active:""}`} > {link.title} </Link>{" "}  
+                        {link.title==='Services'? <ul className=" w-56 py-4 rounded-lg px-3" style={{position:"absolute",left:"0",top:"35px",background:"#ffffff1a",zIndex:"5" }} > 
+                        
+                        <li className="my-2 py-1 px-3 rounded-md " style={{background:"var( --main_fontColor)"}}  ><Link  className="text-white no-underline  " style={{boxSizing:"unset"}} href={'/Ai'} >Artificial Intelligence</Link></li>
+                        <li className="my-2 py-1 px-3 rounded-md " style={{background:"var( --main_fontColor)"}}  > <Link  className="text-white no-underline  " style={{boxSizing:"unset"}} href={'/MainSoftWareDev'} >SoftWare Dev...</Link> </li>
+                        <li className="my-2 py-1 px-3 rounded-md " style={{background:"var( --main_fontColor)"}}  > <Link  className="text-white no-underline  " style={{boxSizing:"unset"}} href={'/MainSmartHome'} >Smart Home</Link> </li>
+                        
+                         </ul>:""}
+                        
+                        </li> )  }
+                
           
             </ul>
 

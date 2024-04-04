@@ -69,6 +69,8 @@ transition: all 400ms;
      top: 0;
      background-color: unset!important;
     translate: 100%;
+    transition: 350ms;
+
     }
 
     .ToggleIcon{
