@@ -24,7 +24,6 @@ export default function Services() {
 
 <Ai />
 
-<FormComp />
       </>
   )
 }

@@ -81,7 +81,10 @@ transition: all 400ms;
         display: block!important;
     }
 
+.drowpDown {
 
+    background-color: #ffffffcf!important;
+}
    
     .navContent::after { content: '';
          position: absolute;
@@ -122,10 +125,7 @@ transition: all 400ms;
             margin-top: -0.75rem;
         }
 
-        /* .navContent {
-
-            display: none;
-        } */
+       
     
 }
 
